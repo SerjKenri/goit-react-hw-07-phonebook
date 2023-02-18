@@ -3,6 +3,8 @@
     flex-direction: column;
     border: 2px solid #000;
     border-radius: 5px;
+    padding: 0 20px;
+    min-width: 320px;
 }
 
 .formName,
@@ -13,7 +15,7 @@
     align-items: center;
     font-size: large;
     text-align: left;
-    padding: 0.5rem 15rem 0.5rem 1rem;
+    min-width: 320px;
 }
 
 .contactBtn {
@@ -46,17 +48,16 @@
     box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
     -webkit-transition: all 150ms ease-in-out;
     transition: all 150ms ease-in-out;
-
 }
 
-.contactBtn:focus, .contactBtn:hover, .contactBtn:active {
+.contactBtn:focus,
+.contactBtn:hover,
+.contactBtn:active {
     box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
 }
 
-
 @media (min-width: 768px) {
     .contactBtn {
-    min-width: 170px;
+        min-width: 170px;
+    }
 }
-}
-

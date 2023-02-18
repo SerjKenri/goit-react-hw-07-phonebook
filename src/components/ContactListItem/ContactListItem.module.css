@@ -43,4 +43,5 @@
     border: 2px solid #000;
     border-radius: 5px;
     padding: 5px;
+    min-width: 320px;
 }

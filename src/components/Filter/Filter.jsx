@@ -1,14 +1,14 @@
 import css from './Filter.module.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { filterContact } from 'redux/addRemoveContactsSlice';
-import { getStatusFilter } from 'redux/selectors';
+import { getFilter } from 'redux/selectors';
+import { setFilter } from 'redux/filterSlice';
 
 export const Filter = () => {
-    const filter = useSelector(getStatusFilter);
+    const filter = useSelector(getFilter);
     const dispatch = useDispatch();
 
     const handleChange = e => {
-        dispatch(filterContact(e.target.value));
+        dispatch(setFilter(e.target.value));
     };
 
     return (

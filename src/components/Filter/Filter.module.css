@@ -5,5 +5,14 @@
     align-items: center;
     font-size: large;
     text-align: left;
-    padding: 0.5rem 15rem 0.5rem 1rem;
+    min-width: 320px;
+}
+
+.filterName:focus {
+    background: linear-gradient(
+        270deg,
+        rgba(213, 223, 233, 1) 0%,
+        rgba(251, 166, 213, 1) 100%
+    );
+    transition: background 0.5s ease;
 }

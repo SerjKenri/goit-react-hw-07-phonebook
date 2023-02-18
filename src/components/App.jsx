@@ -8,7 +8,6 @@ export function App() {
     return (
         <div
             style={{
-                width: '100%',
                 maxWidth: '1200px',
                 margin: '0 auto',
                 padding: '0 20px',
@@ -16,11 +15,9 @@ export function App() {
                 alignItems: 'center',
                 fontSize: 25,
                 color: '#010101',
-                
             }}
         >
             <Section title="Phonebook">
-
                 <ContactForm />
             </Section>
 

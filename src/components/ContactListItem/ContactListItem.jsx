@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
 import css from './ContactListItem.module.css';
 import { useDispatch } from 'react-redux';
-import { removeContact } from 'redux/addRemoveContactsSlice';
+import { delContact } from 'redux/operations';
 
 export const ConctactListItem = ({ name, number, id }) => {
     const dispatch = useDispatch();
 
-    const handleDelete = id => dispatch(removeContact(id));
+    const handleDelete = id => dispatch(delContact(id));
 
     return (
         <li className={css.liStyle}>
