@@ -6,6 +6,7 @@
     font-size: large;
     text-align: left;
     min-width: 320px;
+    font-family: Georgia;
 }
 
 .filterName:focus {

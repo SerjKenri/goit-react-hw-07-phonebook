@@ -15,6 +15,7 @@ export function App() {
                 alignItems: 'center',
                 fontSize: 25,
                 color: '#010101',
+                fontFamily: 'Georgia',
             }}
         >
             <Section title="Phonebook">
