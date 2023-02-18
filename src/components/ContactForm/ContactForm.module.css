@@ -18,6 +18,16 @@
     font-family: Georgia;
 }
 
+.formName:focus,
+.formNumber:focus {
+    background: linear-gradient(
+        270deg,
+        rgba(213, 223, 233, 1) 0%,
+        rgba(251, 166, 213, 1) 100%
+    );
+    transition: background 0.5s ease;
+}
+
 .contactBtn {
     box-sizing: border-box;
     -webkit-appearance: none;
@@ -44,7 +54,7 @@
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     border-color: #3498db;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
     -webkit-transition: all 150ms ease-in-out;
     transition: all 150ms ease-in-out;
@@ -54,6 +64,7 @@
 .contactBtn:focus,
 .contactBtn:hover,
 .contactBtn:active {
+    color: #3498db;
     box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
 }
 
