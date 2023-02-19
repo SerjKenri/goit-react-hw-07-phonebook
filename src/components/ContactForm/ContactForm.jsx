@@ -1,5 +1,4 @@
 import css from './ContactForm.module.css';
-import { nanoid } from 'nanoid';
 import { useSelector, useDispatch } from 'react-redux';
 import { getContacts } from 'redux/selectors';
 import { addContact } from 'redux/operations';
@@ -8,8 +7,8 @@ export function ContactForm() {
     const contacts = useSelector(getContacts);
     const dispatch = useDispatch();
 
-
-    const contactNumberExists = num => contacts.some(contact => contact.number === num);
+    const contactNumberExists = num =>
+        contacts.some(contact => contact.phone === num);
 
     const handleSubmit = e => {
         e.preventDefault();
@@ -20,7 +19,6 @@ export function ContactForm() {
 
         if (!contacts.length || !contactNumberExists(contactNumber)) {
             const newContact = {
-                id: nanoid(5),
                 name: contactName,
                 phone: contactNumber,
             };

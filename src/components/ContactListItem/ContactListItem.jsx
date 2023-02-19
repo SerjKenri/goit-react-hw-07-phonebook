@@ -6,7 +6,9 @@ import { delContact } from 'redux/operations';
 export const ConctactListItem = ({ name, number, id }) => {
     const dispatch = useDispatch();
 
-    const handleDelete = id => dispatch(delContact(id));
+    const handleDelete = id => {
+        dispatch(delContact(id));
+    };
 
     return (
         <li className={css.liStyle}>

@@ -3,8 +3,13 @@ import { Section } from './Section/Section';
 import { ContactForm } from './ContactForm/ContactForm';
 import { ContactList } from './ContactList/ContactList';
 import { Filter } from './Filter/Filter';
-
+import Loader from './Loader/Loader';
+import { getIsLoading, getError } from 'redux/selectors';
+import { useSelector } from 'react-redux';
 export function App() {
+    const isLoading = useSelector(getIsLoading);
+    const error = useSelector(getError);
+
     return (
         <div
             style={{
@@ -25,6 +30,7 @@ export function App() {
             <Section title="Contacts">
                 <Filter />
                 <ContactList />
+                {isLoading && !error && <Loader />}
             </Section>
         </div>
     );
