@@ -9,6 +9,8 @@ export function ContactForm() {
 
     const contactNumberExists = num =>
         contacts.some(contact => contact.phone === num);
+    const contactNameExists = name =>
+        contacts.some(contact => contact.name === name);
 
     const handleSubmit = e => {
         e.preventDefault();
@@ -17,7 +19,11 @@ export function ContactForm() {
         const contactName = name.value;
         const contactNumber = phone.value;
 
-        if (!contacts.length || !contactNumberExists(contactNumber)) {
+        if (
+            !contacts.length ||
+            (!contactNumberExists(contactNumber) &&
+                !contactNameExists(contactName))
+        ) {
             const newContact = {
                 name: contactName,
                 phone: contactNumber,
